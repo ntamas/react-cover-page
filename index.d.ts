@@ -8,7 +8,7 @@ export interface ISplashScreenPresentationProps extends React.HTMLAttributes<HTM
   loading?: boolean;
   loadingIndicator?: React.ReactNode;
   message?: React.ReactNode;
-  title?: React.ReactNode;
+  title?: string;
   visible?: boolean;
 }
 
@@ -16,7 +16,8 @@ export interface ISplashScreenProps extends React.HTMLAttributes<HTMLDivElement>
   errorMessage?: React.ReactNode | ((error: any) => React.ReactNode);
   icon?: React.ReactNode;
   loadingMessage?: React.ReactNode;
-  title?: React.ReactNode;
+  promise: Promise<any>;
+  title?: string;
 }
 
 export declare const SplashScreen: React.SFC<ISplashScreenProps>;
