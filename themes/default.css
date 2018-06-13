@@ -1,0 +1,74 @@
+.react-splashscreen {
+  background: #ECEFF1;
+  font-family: "Roboto", "Open Sans", "SF UI Text", Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+.react-splashscreen-content {
+  color: #607D8B;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.react-splashscreen h1 {
+  font-weight: 200;
+  margin: 0.25em 0;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+.react-splashscreen-icon {
+  margin-bottom: 0.5em;
+}
+.react-splashscreen-message {
+}
+.react-splashscreen-error {
+  color: #f44336;
+}
+.react-splashscreen-progress {
+  margin: 1em auto;
+  width: 320px;
+}
+.react-splashscreen-progress-line, .react-splashscreen-progress-line:before,
+.react-splashscreen-progress-done, .react-splashscreen-progress-error {
+  height: 3px;
+  width: 100%;
+  margin: 0;
+}
+.react-splashscreen-progress-done {
+  background-color: #4CAF50;
+  display: -webkit-flex;
+  display: flex;
+}
+.react-splashscreen-progress-error {
+  background-color: #f44336;
+  display: -webkit-flex;
+  display: flex;
+}
+.react-splashscreen-progress-line {
+  background-color: #90CAF9;
+  display: -webkit-flex;
+  display: flex;
+}
+.react-splashscreen-progress-line:before {
+  background-color: #2196F3;
+  content: '';
+  -webkit-animation: react-splashscreen-running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: react-splashscreen-running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+@-webkit-keyframes react-splashscreen-running-progress {
+  0% { margin-left: 0px; margin-right: 100%; }
+  50% { margin-left: 25%; margin-right: 0%; }
+  100% { margin-left: 100%; margin-right: 0; }
+}
+@keyframes react-splashscreen-running-progress {
+  0% { margin-left: 0px; margin-right: 100%; }
+  50% { margin-left: 25%; margin-right: 0%; }
+  100% { margin-left: 100%; margin-right: 0; }
+}
