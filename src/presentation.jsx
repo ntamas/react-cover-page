@@ -23,14 +23,14 @@ const defaultBaseStyles = {
 /**
  * CSS class prefix for all tags used by this component.
  */
-const cssPrefix = 'react-splashscreen'
+const cssPrefix = 'react-cover-page'
 
 /**
  * Pure functional presentation component of the splash screen.
  * This component can be used if you want to take full control over what is
  * to be shown on the splash screen.
  */
-export const SplashScreenPresentation = ({
+export const CoverPagePresentation = ({
   error,
   icon,
   loading,
@@ -109,7 +109,7 @@ export const SplashScreenPresentation = ({
   )
 }
 
-SplashScreenPresentation.propTypes = {
+CoverPagePresentation.propTypes = {
   error: PropTypes.bool,
   icon: PropTypes.node,
   loading: PropTypes.bool,
@@ -120,10 +120,10 @@ SplashScreenPresentation.propTypes = {
   visible: PropTypes.bool
 }
 
-SplashScreenPresentation.defaultProps = {
+CoverPagePresentation.defaultProps = {
   error: false,
   loading: true,
   visible: true
 }
 
-export default SplashScreenPresentation
+export default CoverPagePresentation

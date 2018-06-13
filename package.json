@@ -1,5 +1,5 @@
 {
-  "name": "react-splashscreen",
+  "name": "react-cover-page",
   "version": "1.0.0",
   "description": "Customizable splash screen for React apps",
   "main": "lib/index.js",
@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ntamas/react-splashscreen.git"
+    "url": "git+https://github.com/ntamas/react-cover-page.git"
   },
   "author": "Tamas Nepusz <ntamas@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ntamas/react-splashscreen/issues"
+    "url": "https://github.com/ntamas/react-cover-page/issues"
   },
-  "homepage": "https://github.com/ntamas/react-splashscreen#readme",
+  "homepage": "https://github.com/ntamas/react-cover-page#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",

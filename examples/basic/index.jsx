@@ -2,7 +2,7 @@ import delay from 'delay'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import SplashScreen, { SplashScreenPresentation } from '../../src/index'
+import CoverPage, { CoverPagePresentation } from '../../src/index'
 
 require('../../themes/default.css')
 
@@ -23,20 +23,20 @@ class App extends React.Component {
     const { promise } = this.state
     return (
       <div>
-        <h1><code>react-splashscreen</code></h1>
+        <h1><code>react-cover-page</code></h1>
 
         <p className='lead'>Customizable splash screen for React apps</p>
 
         <div style={{ textAlign: 'center' }}>
           <div style={{ position: 'relative', width: 640, height: 480, margin: 'auto', border: '10px solid #90A4AE' }}>
-            <SplashScreen promise={promise}
+            <CoverPage promise={promise}
               icon={<img src='icon.png' width={96} height={96} alt='Icon' />}
               title='Awesome app'
               loadingMessage='Please wait, loading...'
             />
 
             {/* We are abusing SplashScreenPresentation here, but imagine that this is the real app */}
-            <SplashScreenPresentation
+            <CoverPagePresentation
               loading={false}
               icon={<img src='success.png' width={96} height={96} alt='Successful' />}
               message='App loaded successfully'

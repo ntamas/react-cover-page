@@ -8,9 +8,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 
-import SplashScreenPresentation from './presentation'
+import CoverPagePresentation from './presentation'
 
-class SplashScreen extends React.Component {
+class CoverPage extends React.Component {
   constructor (props) {
     super(props)
     this._promiseChanged = this._promiseChanged.bind(this)
@@ -39,7 +39,7 @@ class SplashScreen extends React.Component {
     const { loadingMessage, promise, ...rest } = this.props
     const { error, loading } = this.state
     return (
-      <SplashScreenPresentation {...rest}
+      <CoverPagePresentation {...rest}
         error={!!error}
         loading={loading}
         message={loading ? loadingMessage : (error || undefined)}
@@ -88,7 +88,7 @@ class SplashScreen extends React.Component {
   }
 }
 
-SplashScreen.propTypes = {
+CoverPage.propTypes = {
   errorMessage: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   icon: PropTypes.node,
   loadingMessage: PropTypes.node,
@@ -100,7 +100,7 @@ SplashScreen.propTypes = {
 }
 
 export {
-  SplashScreen as default,
-  SplashScreen,
-  SplashScreenPresentation
+  CoverPage as default,
+  CoverPage,
+  CoverPagePresentation
 }
