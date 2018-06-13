@@ -14,6 +14,7 @@ class SplashScreen extends React.Component {
   constructor (props) {
     super(props)
     this._promiseChanged = this._promiseChanged.bind(this)
+    this.state = {}
   }
 
   componentDidMount () {
@@ -91,6 +92,9 @@ SplashScreen.propTypes = {
   errorMessage: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   icon: PropTypes.node,
   loadingMessage: PropTypes.node,
+  promise: PropTypes.shape({
+    then: PropTypes.func
+  }),
   style: PropTypes.object,
   title: PropTypes.node
 }

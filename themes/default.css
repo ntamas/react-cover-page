@@ -2,7 +2,9 @@
   background: #ECEFF1;
   font-family: "Roboto", "Open Sans", "SF UI Text", Arial, sans-serif;
   height: 100%;
+  text-align: center;
   width: 100%;
+  z-index: 10000;
 
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */

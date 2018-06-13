@@ -91,7 +91,7 @@ export const SplashScreenPresentation = ({
   }
 
   return (
-    <Transition appear timeout={300} in={visible}>
+    <Transition timeout={300} in={visible}>
       {
         state => (
           <div className={cssPrefix} style={{
