@@ -1,4 +1,5 @@
 **/.gitkeep
+dist/
 examples/
 node_modules/
 *.tgz
