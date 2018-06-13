@@ -13,11 +13,7 @@ import SplashScreenPresentation from './presentation'
 class SplashScreen extends React.Component {
   constructor (props) {
     super(props)
-
     this._promiseChanged = this._promiseChanged.bind(this)
-
-    this.state = {
-    }
   }
 
   componentDidMount () {
@@ -86,7 +82,7 @@ class SplashScreen extends React.Component {
             loading: false
           })
         }
-      },
+      }
     )
   }
 }
@@ -96,7 +92,7 @@ SplashScreen.propTypes = {
   icon: PropTypes.node,
   loadingMessage: PropTypes.node,
   style: PropTypes.object,
-  title: PropTypes.node,
+  title: PropTypes.node
 }
 
 export {

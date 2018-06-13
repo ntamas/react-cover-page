@@ -64,19 +64,19 @@ export const SplashScreenPresentation = ({
     if (loading && !error) {
       children.push(
         <div key='loadingIndicator' className={cssPrefix + '-progress'}>
-          <div className={cssPrefix + '-progress-line'}></div>
+          <div className={cssPrefix + '-progress-line'} />
         </div>
       )
     } else if (!error) {
       children.push(
         <div key='loadingIndicator' className={cssPrefix + '-progress'}>
-          <div className={cssPrefix + '-progress-done'}></div>
+          <div className={cssPrefix + '-progress-done'} />
         </div>
       )
     } else {
       children.push(
         <div key='loadingIndicator' className={cssPrefix + '-progress'}>
-          <div className={cssPrefix + '-progress-error'}></div>
+          <div className={cssPrefix + '-progress-error'} />
         </div>
       )
     }

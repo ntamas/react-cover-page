@@ -6,8 +6,6 @@ import SplashScreen, { SplashScreenPresentation } from '../../src/index'
 
 require('../../themes/default.css')
 
-const ANCHORS = 'topLeft topRight bottomLeft bottomRight inline'.split(' ')
-
 const makeSuccessfulPromise = () => delay(3000)
 const makeFailedPromise = () => delay(3000).then(() => {
   throw new Error('Failed to load app')
