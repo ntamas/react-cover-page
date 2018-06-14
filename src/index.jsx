@@ -65,26 +65,29 @@ class CoverPage extends React.Component {
     this.setState({
       promise,
       error: false,
-      loading: true
+      loading: !!promise
     })
-    promise.then(
-      () => {
-        if (promise === this.state.promise) {
-          this.setState({
-            error: false,
-            loading: false
-          })
+
+    if (promise) {
+      promise.then(
+        () => {
+          if (promise === this.state.promise) {
+            this.setState({
+              error: false,
+              loading: false
+            })
+          }
+        },
+        error => {
+          if (promise === this.state.promise) {
+            this.setState({
+              error: this._generateErrorMessage(error),
+              loading: false
+            })
+          }
         }
-      },
-      error => {
-        if (promise === this.state.promise) {
-          this.setState({
-            error: this._generateErrorMessage(error),
-            loading: false
-          })
-        }
-      }
-    )
+      )
+    }
   }
 }
 
