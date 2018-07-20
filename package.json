@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/ntamas/react-cover-page#readme",
   "devDependencies": {
+    "@types/react": "^16.4.6",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

@@ -14,6 +14,7 @@ export interface ICoverPagePresentationProps extends React.HTMLAttributes<HTMLDi
 
 export interface ICoverPageProps extends React.HTMLAttributes<HTMLDivElement> {
   errorMessage?: React.ReactNode | ((error: any) => React.ReactNode);
+  finishedMessage?: React.ReactNode;
   icon?: React.ReactNode;
   loadingMessage?: React.ReactNode;
   promise: Promise<any>;
