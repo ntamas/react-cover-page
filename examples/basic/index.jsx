@@ -32,6 +32,7 @@ class App extends React.Component {
             <CoverPage promise={promise}
               icon={<img src='icon.png' width={96} height={96} alt='Icon' />}
               title='Awesome app'
+              finishedMessage='App loaded successfully'
               loadingMessage='Please wait, loading...'
             />
 
@@ -39,6 +40,7 @@ class App extends React.Component {
             <CoverPagePresentation
               loading={false}
               icon={<img src='success.png' width={96} height={96} alt='Successful' />}
+              title='Awesome app'
               message='App loaded successfully'
               style={{ zIndex: -1000 }}
             />

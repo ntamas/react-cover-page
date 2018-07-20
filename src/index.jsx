@@ -42,7 +42,7 @@ class CoverPage extends React.Component {
       <CoverPagePresentation {...rest}
         error={!!error}
         loading={loading}
-        message={loading ? loadingMessage : (error || undefined)}
+        message={this._getMessageToShow()}
         visible={error || loading}
       />
     )
@@ -58,6 +58,20 @@ class CoverPage extends React.Component {
       }
     } else {
       return error.message || 'An unknown error happened'
+    }
+  }
+
+  _getMessageToShow () {
+    const { finishedMessage, loadingMessage, promise } = this.props
+    const { error, loading } = this.state
+    if (loading) {
+      return loadingMessage
+    } else if (error) {
+      return error
+    } else if (promise) {
+      return finishedMessage
+    } else {
+      return undefined
     }
   }
 
@@ -94,6 +108,7 @@ class CoverPage extends React.Component {
 CoverPage.propTypes = {
   errorMessage: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   icon: PropTypes.node,
+  finishedMessage: PropTypes.node,
   loadingMessage: PropTypes.node,
   promise: PropTypes.shape({
     then: PropTypes.func
