@@ -36,7 +36,7 @@ class CoverPage extends React.Component {
   }
 
   render () {
-    const { loadingMessage, promise, ...rest } = this.props
+    const { finishedMessage, loadingMessage, promise, ...rest } = this.props
     const { error, loading } = this.state
     return (
       <CoverPagePresentation {...rest}
