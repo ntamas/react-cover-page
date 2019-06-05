@@ -43,7 +43,7 @@ class CoverPage extends React.Component {
         error={!!error}
         loading={loading}
         message={this._getMessageToShow()}
-        visible={error || loading}
+        visible={(!!error) || loading}
       />
     )
   }
