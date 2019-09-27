@@ -94,12 +94,15 @@ export const CoverPagePresentation = ({
     <Transition timeout={300} in={visible}>
       {
         state => (
-          <div className={cssPrefix} style={{
-            ...baseStyles,
-            display: (state === 'exited') ? 'none' : 'block',
-            opacity: (state === 'entering' || state === 'entered') ? 1 : 0,
-            transition: 'opacity 300ms ease-in-out'
-          }} {...rest}>
+          <div
+            className={cssPrefix}
+            style={{
+              ...baseStyles,
+              display: (state === 'exited') ? 'none' : 'block',
+              opacity: (state === 'entering' || state === 'entered') ? 1 : 0,
+              transition: 'opacity 300ms ease-in-out'
+            }} {...rest}
+          >
             <div className={cssPrefix + '-content'}>
               {children}
             </div>

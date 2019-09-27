@@ -14,10 +14,12 @@ class CoverPage extends React.Component {
   constructor (props) {
     super(props)
     this._promiseChanged = this._promiseChanged.bind(this)
+    this._isMounted = false
     this.state = {}
   }
 
   componentDidMount () {
+    this._isMounted = true
     if (this.props.promise !== undefined) {
       this._promiseChanged(undefined, this.props.promise)
     }
@@ -33,13 +35,15 @@ class CoverPage extends React.Component {
     if (this.props.promise !== undefined) {
       this._promiseChanged(this.props.promise, undefined)
     }
+    this._isMounted = false
   }
 
   render () {
     const { finishedMessage, loadingMessage, promise, ...rest } = this.props
     const { error, loading } = this.state
     return (
-      <CoverPagePresentation {...rest}
+      <CoverPagePresentation
+        {...rest}
         error={!!error}
         loading={loading}
         message={this._getMessageToShow()}
@@ -85,7 +89,7 @@ class CoverPage extends React.Component {
     if (promise) {
       promise.then(
         () => {
-          if (promise === this.state.promise) {
+          if (this._isMounted && promise === this.state.promise) {
             this.setState({
               error: false,
               loading: false
@@ -93,7 +97,7 @@ class CoverPage extends React.Component {
           }
         },
         error => {
-          if (promise === this.state.promise) {
+          if (this._isMounted && promise === this.state.promise) {
             this.setState({
               error: this._generateErrorMessage(error),
               loading: false
