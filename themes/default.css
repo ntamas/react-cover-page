@@ -1,79 +1,19 @@
-.react-cover-page {
-  background: #ECEFF1;
-  font-family: "Roboto", "Open Sans", "SF UI Text", Arial, sans-serif;
-  font-size: 16px;
-  height: 100%;
-  text-align: center;
-  width: 100%;
-  z-index: 10000;
+@import "./light.css";
 
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
-}
-.react-cover-page-content {
-  color: #607D8B;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.react-cover-page h1 {
-  color: #455A64;
-  font-size: 32px;
-  font-weight: 200;
-  margin: 0.25em 0;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
-}
-.react-cover-page-icon {
-  margin-bottom: 0.5em;
-}
-.react-cover-page-message {
-}
-.react-cover-page-error {
-  color: #f44336;
-}
-.react-cover-page-progress {
-  margin: 1em auto;
-  width: 320px;
-}
-.react-cover-page-progress-line, .react-cover-page-progress-line:before,
-.react-cover-page-progress-done, .react-cover-page-progress-error {
-  height: 3px;
-  width: 100%;
-  margin: 0;
-}
-.react-cover-page-progress-done {
-  background-color: #4CAF50;
-  display: -webkit-flex;
-  display: flex;
-}
-.react-cover-page-progress-error {
-  background-color: #f44336;
-  display: -webkit-flex;
-  display: flex;
-}
-.react-cover-page-progress-line {
-  background-color: #90CAF9;
-  display: -webkit-flex;
-  display: flex;
-}
-.react-cover-page-progress-line:before {
-  background-color: #2196F3;
-  content: '';
-  -webkit-animation: react-cover-page-running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  animation: react-cover-page-running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-@-webkit-keyframes react-cover-page-running-progress {
-  0% { margin-left: 0px; margin-right: 100%; }
-  50% { margin-left: 25%; margin-right: 0%; }
-  100% { margin-left: 100%; margin-right: 0; }
-}
-@keyframes react-cover-page-running-progress {
-  0% { margin-left: 0px; margin-right: 100%; }
-  50% { margin-left: 25%; margin-right: 0%; }
-  100% { margin-left: 100%; margin-right: 0; }
+@media (prefers-color-scheme: dark) {
+  .react-cover-page {
+    background: #20242a;
+  }
+  .react-cover-page-content {
+    color: #ccddee;
+  }
+  .react-cover-page h1 {
+    color: #e2f0ff;
+  }
+  .react-cover-page-progress-line {
+    background-color: #223344;
+  }
+  .react-cover-page-progress-line:before {
+    background-color: #2196F3;
+  }
 }

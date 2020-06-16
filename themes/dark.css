@@ -1,0 +1,17 @@
+@import "./_common.css";
+
+.react-cover-page {
+  background: #20242a;
+}
+.react-cover-page-content {
+  color: #ccddee;
+}
+.react-cover-page h1 {
+  color: #e2f0ff;
+}
+.react-cover-page-progress-line {
+  background-color: #223344;
+}
+.react-cover-page-progress-line:before {
+  background-color: #2196F3;
+}

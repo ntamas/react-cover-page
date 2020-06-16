@@ -29,7 +29,8 @@ class App extends React.Component {
 
         <div style={{ textAlign: 'center' }}>
           <div style={{ position: 'relative', width: 640, height: 480, margin: 'auto', border: '10px solid #90A4AE' }}>
-            <CoverPage promise={promise}
+            <CoverPage
+              promise={promise}
               icon={<img src='icon.png' width={96} height={96} alt='Icon' />}
               title='Awesome app'
               finishedMessage='App loaded successfully'
