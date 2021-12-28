@@ -8,7 +8,7 @@ export interface ICoverPagePresentationProps extends React.HTMLAttributes<HTMLDi
   loading?: boolean;
   loadingIndicator?: React.ReactNode;
   message?: React.ReactNode;
-  title?: string;
+  title?: React.ReactNode;
   visible?: boolean;
 }
 
@@ -18,7 +18,7 @@ export interface ICoverPageProps extends React.HTMLAttributes<HTMLDivElement> {
   icon?: React.ReactNode;
   loadingMessage?: React.ReactNode;
   promise: Promise<any>;
-  title?: string;
+  title?: React.ReactNode;
 }
 
 export declare const CoverPage: React.SFC<ICoverPageProps>;
