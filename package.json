@@ -1,6 +1,6 @@
 {
   "name": "react-cover-page",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "Customizable splash screen for React apps",
   "main": "lib/index.js",
   "types": "index.d.ts",
