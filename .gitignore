@@ -1,6 +1,7 @@
 dist/
 docs/ghpages/
 examples/**/bundle.js
+examples/**/LICENSE*
 lib/
 node_modules/
 *.tgz
