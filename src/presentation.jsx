@@ -32,6 +32,7 @@ const cssPrefix = 'react-cover-page'
  */
 export const CoverPagePresentation = ({
   error,
+  footer,
   icon,
   loading,
   loadingIndicator,
@@ -106,6 +107,7 @@ export const CoverPagePresentation = ({
             <div className={cssPrefix + '-content'}>
               {children}
             </div>
+            {footer && <div className={cssPrefix + '-footer'}>{footer}</div>}
           </div>
         )
       }
@@ -115,6 +117,7 @@ export const CoverPagePresentation = ({
 
 CoverPagePresentation.propTypes = {
   error: PropTypes.bool,
+  footer: PropTypes.node,
   icon: PropTypes.node,
   loading: PropTypes.bool,
   loadingIndicator: PropTypes.node,
