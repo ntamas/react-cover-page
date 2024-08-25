@@ -31,15 +31,15 @@ const cssPrefix = 'react-cover-page'
  * to be shown on the splash screen.
  */
 export const CoverPagePresentation = ({
-  error,
+  error = false,
   footer,
   icon,
-  loading,
+  loading = true,
   loadingIndicator,
   message,
   style,
   title,
-  visible,
+  visible = true,
   ...rest
 }) => {
   const baseStyles = {
@@ -48,6 +48,7 @@ export const CoverPagePresentation = ({
   }
 
   const children = []
+  const nodeRef = React.useRef(null)
 
   if (icon) {
     children.push(<div key='icon' className={cssPrefix + '-icon'}>{icon}</div>)
@@ -92,11 +93,12 @@ export const CoverPagePresentation = ({
   }
 
   return (
-    <Transition timeout={300} in={visible}>
+    <Transition timeout={300} in={visible} nodeRef={nodeRef}>
       {
         state => (
           <div
             className={cssPrefix}
+            ref={nodeRef}
             style={{
               ...baseStyles,
               display: (state === 'exited') ? 'none' : 'block',
@@ -125,12 +127,6 @@ CoverPagePresentation.propTypes = {
   style: PropTypes.object,
   title: PropTypes.node,
   visible: PropTypes.bool
-}
-
-CoverPagePresentation.defaultProps = {
-  error: false,
-  loading: true,
-  visible: true
 }
 
 export default CoverPagePresentation

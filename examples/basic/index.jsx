@@ -1,6 +1,6 @@
 import delay from 'delay'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 
 import CoverPage, { CoverPagePresentation } from '../../src/index'
 
@@ -37,7 +37,7 @@ class App extends React.Component {
               loadingMessage='Please wait, loading...'
             />
 
-            {/* We are abusing SplashScreenPresentation here, but imagine that this is the real app */}
+            {/* We are abusing CoverPagePresentation here, but imagine that this is the real app */}
             <CoverPagePresentation
               loading={false}
               icon={<img src='success.png' width={96} height={96} alt='Successful' />}
@@ -57,4 +57,5 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const root = createRoot(document.getElementById('root'))
+root.render(<App />)
